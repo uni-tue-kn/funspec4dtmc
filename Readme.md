@@ -39,10 +39,8 @@ For this reason FunSpec4DTMC offers the following specification types:
     <img src="https://latex.codecogs.com/gif.latex?X_{n+1}=f(X_n,Y)" /> 
 - Computation of consecutive state distributions 
     - Forward algorithms
-        - Input: 
-          <img src="https://latex.codecogs.com/gif.latex?\mathcal{X}" /> 
-        - Output: 
-        
+       - Input:  <img src="https://latex.codecogs.com/gif.latex?\mathcal{X}" /> 
+       - Output: 
             -  Consecutive state distribution <img src="https://latex.codecogs.com/gif.latex?x_{n+1}" /> 
                 - Additional input <img src="https://latex.codecogs.com/gif.latex?x_n" /> 
                 - State transition matrix <img src="https://latex.codecogs.com/gif.latex?P" />  not needed
