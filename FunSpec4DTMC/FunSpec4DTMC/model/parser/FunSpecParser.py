@@ -1243,14 +1243,19 @@ class FunSpecParser:
         :param markov_chain: Markov chain to store
         :param file_path: external file used as storage path
         """
+        print("hier")
+        print(list(markov_chain.get_initial_state_vector()))
+        print(list(markov_chain.get_transition_matrix()))
+        print(list(markov_chain.get_state_designations()))
+
         try:
-            config = {'Initial state vector': markov_chain.get_initial_state_vector().tolist(),
-                      'Transition matrix': markov_chain.get_transition_matrix().tolist()
+            config = {'Initial state vector': list(markov_chain.get_initial_state_vector()),
+                      'Transition matrix': [line.tolist() for line in list(markov_chain.get_transition_matrix())]
                       }
             if markov_chain.get_state_designations() is None:
                 config["State designations"] = None
             else:
-                config["State designations"] = [state_name.decode("utf-8") for state_name in markov_chain.get_state_designations().tolist()]
+                config["State designations"] = list(markov_chain.get_state_designations())
             with open(file_path, 'w') as fp:
                 json.dump(config,
                           indent=4, separators=(',', ': '), fp=fp)
