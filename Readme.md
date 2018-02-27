@@ -8,7 +8,7 @@ In addition, we implement nine direct and iterative algorithms to compute variou
 
 <p align="center"><img src="figures/MainWindow.PNG"/>
 </p>
-<p align="center">Main window of FunSpec4DTMC [[1]](https://link.springer.com/chapter/10.1007/978-3-319-74947-1_28) </p>
+<p align="center">Main window of FunSpec4DTMC [1]. </p>
 
 
 ## Motivation
@@ -30,7 +30,7 @@ For this reason FunSpec4DTMC offers the following specification types:
 
 ### Functional Specification of DTMCs
 
--   Functional specification
+-   Functional specification [[2]](http://www.worldacademicunion.com/journal/1746-7233WJMS/wjmsvol07no01paper01.pdf)
     -   States <img src="https://latex.codecogs.com/gif.latex?\mathcal{X}" /> 
         -   Initial state distribution <img src="https://latex.codecogs.com/gif.latex?x_0" /> 
     -   Factors <img src="https://latex.codecogs.com/gif.latex?\mathcal{Y}" /> 
@@ -67,7 +67,7 @@ For this reason FunSpec4DTMC offers the following specification types:
 
 
 <p align="center"><img src="figures/structure.PNG" /></p>
-<p align="center">Analysis process of FunSpec4DTMC. Taken from [[1]](https://link.springer.com/chapter/10.1007/978-3-319-74947-1_28) .</p>
+<p align="center">Analysis process of FunSpec4DTMC. Taken from [1].</p>
 
 
 ### Computation Methods for the stationary state distribution
@@ -84,7 +84,7 @@ For this reason FunSpec4DTMC offers the following specification types:
       -  applicable to aperiodic DTMCs and to DTMCs with a period of  <img src="https://latex.codecogs.com/gif.latex?2^n,n\in\mathbb{N}_0" /> 
   - Calculation of the Cesaro limit 
       - <img src="https://latex.codecogs.com/gif.latex?$(\lim\limits_{n\rightarrow\infty}{1/(n+1)}\cdot\sum_{i=0}^{n}x_i})" /> 
-  - Modified calculation of the Cesaro limit
+  - Modified calculation of the Cesaro limit [[2]](http://www.worldacademicunion.com/journal/1746-7233WJMS/wjmsvol07no01paper01.pdf)
       -  <img src="https://latex.codecogs.com/gif.latex?$(\lim\limits_{n\rightarrow\infty}{1/p\cdot\sum_{n\leq\text{}i\text{}n+p}x_i})" /> 
       -  analysis of transition structures to compute the period  <img src="https://latex.codecogs.com/gif.latex?P" /> 
     
