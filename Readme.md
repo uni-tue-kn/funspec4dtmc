@@ -1,11 +1,12 @@
 # FunSpec4DTMC <br/> A Tool for Modelling Discrete-Time Markov Chains (DTMCs) Using Functional Specification
 
-We present a tool for the analysis of finite discrete-time Markov chains (DTMCs).
+We present a tool [[1]](https://link.springer.com/chapter/10.1007/978-3-319-74947-1_28) for the analysis of finite discrete-time Markov chains (DTMCs).
 As a novelty, the tool offers functional specification of DTMCs and implements forward algorithms to compute the stationary state distribution <img src="https://latex.codecogs.com/gif.latex?x_s" />  of the DTMC or 
 derive its transition matrix .
 In addition, we implement nine direct and iterative algorithms to compute various metrics of DTMCs based on <img src="https://latex.codecogs.com/gif.latex?P" />  including an algorithm to determine the period of the DTMC.
 
-![GUI of FunSpec4DTMC](http://atlas.informatik.uni-tuebingen.de/git/hauserf/2017-Markov-Chains/raw/master/poster/figures/MainWindow.PNG)
+![GUI of FunSpec4DTMC](figures/MainWindow.PNG)
+
 
 ## Motivation
 The tool is intended for production purposes as well as a platform for teaching the functional specification of DTMCs.
@@ -38,8 +39,10 @@ For this reason FunSpec4DTMC offers the following specification types:
     <img src="https://latex.codecogs.com/gif.latex?X_{n+1}=f(X_n,Y)" /> 
 - Computation of consecutive state distributions 
     - Forward algorithms
-        - Input: <img src="https://latex.codecogs.com/gif.latex?\mathcal{X}" /> 
+        - Input: 
+          <img src="https://latex.codecogs.com/gif.latex?\mathcal{X}" /> 
         - Output: 
+        
             -  Consecutive state distribution <img src="https://latex.codecogs.com/gif.latex?x_{n+1}" /> 
                 - Additional input <img src="https://latex.codecogs.com/gif.latex?x_n" /> 
                 - State transition matrix <img src="https://latex.codecogs.com/gif.latex?P" />  not needed
@@ -56,13 +59,12 @@ For this reason FunSpec4DTMC offers the following specification types:
 - Python 3 library published under GPLv3
   - Simulation library 
   - Intuitive GUI for simplified use
-  - 
   
 
 - Multiple project tabs, analysis dialogues, and means for visualization
 - Four phases of FunSpec4DTMC’s analysis process for DTMCs
 
-![Analysis process](http://atlas.informatik.uni-tuebingen.de/git/hauserf/2017-Markov-Chains/raw/master/figures/structure.PNG)
+![Analysis process](figures/structure.PNG)
 
 ### Computation Methods for the stationary state distribution
 
