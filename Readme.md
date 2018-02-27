@@ -6,7 +6,9 @@ derive its transition matrix .
 In addition, we implement nine direct and iterative algorithms to compute various metrics of DTMCs based on <img src="https://latex.codecogs.com/gif.latex?P" />  including an algorithm to determine the period of the DTMC.
 
 
-![GUI of FunSpec4DTMC](figures/MainWindow.PNG)
+<p align="center"><img src="figures/MainWindow.PNG"/>
+</p>
+<p align="center">Main window of FunSpec4DTMC [[1]](https://link.springer.com/chapter/10.1007/978-3-319-74947-1_28) </p>
 
 
 ## Motivation
@@ -63,7 +65,10 @@ For this reason FunSpec4DTMC offers the following specification types:
 - Multiple project tabs, analysis dialogues, and means for visualization
 - Four phases of FunSpec4DTMC’s analysis process for DTMCs
 
-![Analysis process](figures/structure.PNG)
+
+<p align="center"><img src="figures/structure.PNG" /></p>
+<p align="center">Analysis process of FunSpec4DTMC. Taken from [[1]](https://link.springer.com/chapter/10.1007/978-3-319-74947-1_28) .</p>
+
 
 ### Computation Methods for the stationary state distribution
 
