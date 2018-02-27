@@ -56,16 +56,11 @@ For this reason FunSpec4DTMC offers the following specification types:
 
 
 ## The tool FunSpec4DTMC
-
 - Python 3 library published under GPLv3
   - Simulation library 
   - Intuitive GUI for simplified use
-  
-
 - Multiple project tabs, analysis dialogues, and means for visualization
 - Four phases of FunSpec4DTMC’s analysis process for DTMCs
-
-
 <p align="center"><img src="figures/structure.PNG" /></p>
 <p align="center">Analysis process of FunSpec4DTMC. Taken from [1].</p>
 
