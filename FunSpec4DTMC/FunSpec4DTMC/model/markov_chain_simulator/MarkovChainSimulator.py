@@ -497,8 +497,13 @@ class MarkovChainSimulator(object):
         if label is not None:
             ax1.legend(loc='best')
         if self._markov_chain.get_state_designations() is not None:
-            ax1.set_xticks(x_values)
-            ax1.set_xticklabels(self._markov_chain.get_state_designations(), rotation=90)
+            if len(self._markov_chain.get_state_designations()) < 30:
+                ax1.set_xticks(x_values)
+                ax1.set_xticklabels(self._markov_chain.get_state_designations(), rotation=90)
+        else:
+            if len(self._markov_chain.get_states()[0]) < 30:
+                ax1.set_xticks(x_values)
+                ax1.set_xticklabels(self._markov_chain.get_states()[0], rotation=90)
         return figure
 
     def plot_cumulative_stationary_state_distribution(self, simulation_steps: int, alpha: float=1, specified_period:int=1, figure = None, label=None):
@@ -537,8 +542,13 @@ class MarkovChainSimulator(object):
         if label is not None:
             ax1.legend(loc='best')
         if self._markov_chain.get_state_designations() is not None:
-            ax1.set_xticks(x_values)
-            ax1.set_xticklabels(self._markov_chain.get_state_designations(), rotation=90)
+            if len(self._markov_chain.get_state_designations()) < 30:
+                ax1.set_xticks(x_values)
+                ax1.set_xticklabels(self._markov_chain.get_state_designations(), rotation=90)
+        else:
+            if len(self._markov_chain.get_states()[0])< 30:
+                ax1.set_xticks(x_values)
+                ax1.set_xticklabels(self._markov_chain.get_states()[0], rotation=90)
         return figure
 
     def plot_complementary_cumulative_stationary_state_distribution(self, simulation_steps: int,
@@ -578,9 +588,15 @@ class MarkovChainSimulator(object):
         ax1.set_xlabel('State')
         if label is not None:
             ax1.legend(loc='best')
+
         if self._markov_chain.get_state_designations() is not None:
-            ax1.set_xticks(x_values)
-            ax1.set_xticklabels(self._markov_chain.get_state_designations(), rotation=90)
+            if len(self._markov_chain.get_state_designations()) < 30:
+                ax1.set_xticks(x_values)
+                ax1.set_xticklabels(self._markov_chain.get_state_designations(), rotation=90)
+        else:
+            if len(self._markov_chain.get_states()[0]) < 30:
+                ax1.set_xticks(x_values)
+                ax1.set_xticklabels(self._markov_chain.get_states()[0], rotation=90)
         return figure
 
 
