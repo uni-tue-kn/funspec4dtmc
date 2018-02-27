@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1077</width>
+    <height>701</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>FunSpec4DTMC</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextOnly</enum>
+  </property>
+  <widget class="QWidget" name="qwidgetMainWindow">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidgetMainWindow">
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1077</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Mode settings</string>
+    </property>
+    <widget class="QMenu" name="menuMode">
+     <property name="title">
+      <string>Calculation mode</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="actionPythonMode"/>
+     <addaction name="actionCythonMode"/>
+     <addaction name="separator"/>
+    </widget>
+    <widget class="QMenu" name="menuApplication_area">
+     <property name="title">
+      <string>Application area</string>
+     </property>
+     <addaction name="actionResearchUsage"/>
+     <addaction name="actionTeachingUsage"/>
+    </widget>
+    <addaction name="menuMode"/>
+    <addaction name="menuApplication_area"/>
+   </widget>
+   <widget class="QMenu" name="menuSave">
+    <property name="title">
+     <string>Save Markov chain</string>
+    </property>
+    <addaction name="actionSave"/>
+   </widget>
+   <widget class="QMenu" name="menuPrecision">
+    <property name="title">
+     <string>Calculation settings</string>
+    </property>
+    <addaction name="actionSet_calculation_precision"/>
+    <addaction name="actionSet_discretization_precision"/>
+   </widget>
+   <widget class="QMenu" name="menuDisplay_settings">
+    <property name="title">
+     <string>Display settings</string>
+    </property>
+    <widget class="QMenu" name="menuSet_persistence_of_results">
+     <property name="title">
+      <string>Set persistence of results</string>
+     </property>
+     <addaction name="actionDisplay_plots_of_previous_simulations"/>
+     <addaction name="actionDiscard_plots_of_past_simulations"/>
+    </widget>
+    <widget class="QMenu" name="menuIgnore_input_visualization">
+     <property name="title">
+      <string>Ignore input visualization</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="actionTrue"/>
+     <addaction name="actionFalse"/>
+    </widget>
+    <addaction name="actionSet_display_accuracy"/>
+    <addaction name="menuSet_persistence_of_results"/>
+    <addaction name="menuIgnore_input_visualization"/>
+   </widget>
+   <addaction name="menuSettings"/>
+   <addaction name="menuPrecision"/>
+   <addaction name="menuDisplay_settings"/>
+   <addaction name="menuSave"/>
+  </widget>
+  <action name="actionSave">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Save Markov chain</string>
+   </property>
+  </action>
+  <action name="actionPythonMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Python mode</string>
+   </property>
+  </action>
+  <action name="actionCythonMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Cython mode</string>
+   </property>
+  </action>
+  <action name="actionSet_calculation_precision">
+   <property name="text">
+    <string>Set calculation precision</string>
+   </property>
+  </action>
+  <action name="actionResearchUsage">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Usage in research</string>
+   </property>
+  </action>
+  <action name="actionTeachingUsage">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Usage in teaching</string>
+   </property>
+  </action>
+  <action name="actionSet_display_accuracy">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Set display accuracy</string>
+   </property>
+  </action>
+  <action name="actionDisplay_plots_of_previous_simulations">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Display plots of previous simulations</string>
+   </property>
+  </action>
+  <action name="actionDiscard_plots_of_past_simulations">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Discard plots of previous simulations</string>
+   </property>
+  </action>
+  <action name="actionTrue">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>True</string>
+   </property>
+  </action>
+  <action name="actionFalse">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>False</string>
+   </property>
+  </action>
+  <action name="actionSet_discretization_precision">
+   <property name="text">
+    <string>Set discretization precision</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

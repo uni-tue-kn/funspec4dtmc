@@ -1,0 +1,84 @@
+{
+  "States": [
+    [
+    [1, 1],
+	[1, 2],
+	[1, 3],
+	[2, 1],
+	[2, 2],
+	[2, 3],
+	[3, 1],
+	[3, 2],
+	[3, 3]
+    ],
+	[
+    [1, 1],
+	[1, 2],
+	[1, 3],
+	[2, 1],
+	[2, 2],
+	[2, 3],
+	[3, 1],
+	[3, 2],
+	[3, 3]
+    ]
+  ],
+  "State space names": [
+    "StateSpace1"
+  ],
+  
+  "State designations": ["x0","x1","x2","x3","x4","x5","x6","x7","x8"],
+  
+  "Initial state vector": [
+    1.0,
+    0.0,
+    0.0,
+	0.0,
+	0.0,
+	0.0,
+	0.0,
+	0.0,
+	0.0
+  ],
+  
+  "Factors": [
+    [
+      "-1.0",
+       "0.0",
+	   "1.0"
+    ],
+    [
+      "-1.0",
+       "0.0",
+       "1.0"
+    ]
+  ],
+  
+  "Factor space names": [
+    "FactorSpace1",
+    "FactorSpace2"
+  ],
+  
+  "Factor probabilities": [
+    [
+      "1/3",
+      "1/3",
+	  "1/3"
+    ],
+    [
+      "1/3",
+      "1/3",
+      "1/3"
+    ]
+  ],
+  "Transition functions": [
+    ["def  transition_function1(state, factor):",
+     "     (s1, s2) = state",
+	 "     s1 = max(min(3.0, s1 + factor), 1.0)",
+	 "     return (float(s1), float(s2))   " ],
+   [ "def  transition_function2(state, factor):",
+     "     (s1, s2) = state",
+	 "     s2 = max(min(s2 + factor, 3.0), 1.0)",
+	 "     return (float(s1), float(s2))   " ]
+  ]
+}

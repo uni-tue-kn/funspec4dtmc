@@ -1,0 +1,43 @@
+{
+
+	"State designations":          null,
+
+	"States":                      [  "range(21)" ,
+									[   0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,  13,  14,  15,  16,  17,  18,  19,  20 ]],
+	
+	
+
+	"Initial state vector":        [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+	
+	"Factors":                     [[1,2,8],[2,5,8]],
+	
+	"Factor space names": ["FactorSpace1", "FactorSpace2"],
+	
+	"State space names": ["FactorSpace1", "FactorSpace2"],
+	
+	"Factor probabilities":        [["1/2", "1/3", "1/6"], ["25/72", "22/72", "25/72"]],
+	
+	"Transition functions": 	  [[
+								   "def transition_function1(state, factor): " , 
+								   "   return min(state + factor, 20)"
+							      ],
+								  [
+								   "def transition_function2(state, factor): " , 
+								   "   return max(state - factor, 0)"
+							      ]]
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
