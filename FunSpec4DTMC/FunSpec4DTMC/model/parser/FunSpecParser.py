@@ -1434,8 +1434,9 @@ class FunSpecParser:
                 x_values = initial_states
                 y_values = markov_chain.get_initial_state_vector()
                 ax1.plot(range(1, len(x_values)+1), y_values, '.', label=state_space_names[0])
-                ax1.set_xticks(range(1, len(x_values)+1))
-                ax1.set_xticklabels(x_values, rotation=90)
+                if len(x_values)<30:
+                    ax1.set_xticks(range(1, len(x_values)+1))
+                    ax1.set_xticklabels(x_values, rotation=90)
                 ax1.set_ylabel('State probabilities')
                 ax1.set_xlabel('States')
 
@@ -1443,8 +1444,9 @@ class FunSpecParser:
             x_values = initial_states
             y_values = markov_chain.get_initial_state_vector()
             ax1.plot(x_values, y_values, '.', label=state_space_names[0])
-            ax1.set_xticks(x_values)
-            ax1.set_ylabel('State probabilities')
+            if len(x_values) < 30:
+                ax1.set_xticks(x_values)
+                ax1.set_ylabel('State probabilities')
             ax1.set_xlabel('States')
         ax1.legend()
         fig2 = plt.figure()
@@ -1481,8 +1483,9 @@ class FunSpecParser:
                 else:
                     indices = [factor_map[str(factor)] for factor in factors[index]]
                     ax2.plot(indices, factor_probabilities[index], '.', label=factor_space_names[index])
-                    ax2.set_xticks(list(factor_map.values()))
-                    ax2.set_xticklabels(list(factor_map.keys()), rotation=90)
+                    if len(x_values) < 30:
+                        ax2.set_xticks(list(factor_map.values()))
+                        ax2.set_xticklabels(list(factor_map.keys()), rotation=90)
                     ax2.set_xlabel('Factors')
                     ax2.set_ylabel('Factor probabilities')
             else:
