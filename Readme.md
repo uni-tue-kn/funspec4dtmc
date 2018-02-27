@@ -1,14 +1,13 @@
-<center>
+
 # FunSpec4DTMC <br/> A Tool for Modelling Discrete-Time Markov Chains (DTMCs) Using Functional Specification
-</center>
 We present a tool [[1]](https://link.springer.com/chapter/10.1007/978-3-319-74947-1_28) for the analysis of finite discrete-time Markov chains (DTMCs).
 As a novelty, the tool offers functional specification of DTMCs and implements forward algorithms to compute the stationary state distribution <img src="https://latex.codecogs.com/gif.latex?x_s" />  of the DTMC or 
 derive its transition matrix .
 In addition, we implement nine direct and iterative algorithms to compute various metrics of DTMCs based on <img src="https://latex.codecogs.com/gif.latex?P" />  including an algorithm to determine the period of the DTMC.
 
-<center>
+
 ![GUI of FunSpec4DTMC](figures/MainWindow.PNG)
-</center>
+
 
 ## Motivation
 The tool is intended for production purposes as well as a platform for teaching the functional specification of DTMCs.
